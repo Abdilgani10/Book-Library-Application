@@ -1,0 +1,18 @@
+<div class="container pad-top">
+  <a ui-sref="newBooks" class="btn-primary btn-lg nodecoration">Add New Book</a>
+  <table class="table bookstable">
+      <tr>
+          <td><h3>All Books</h3></td>
+          <td></td>
+      </tr>
+      <tr ng-repeat="book in books">
+          <td>{{book.title}}</td>
+          <td>{{book.description}}</td>
+          <td>{{book.yearPublished}}</td>
+          <td>
+              <a class="btn btn-primary" ui-sref="viewBooks({id:books.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteBooks(books)">Delete</a>
+          </td>
+      </tr>
+  </table>
+</div>
